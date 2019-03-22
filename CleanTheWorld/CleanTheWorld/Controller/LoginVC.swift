@@ -98,8 +98,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 		*/
 		isKeyboardHideTheContent = (endOfSubviewPosition + keyboardHeight) > viewContainerHeight ? true : false
 		if (isKeyboardHideTheContent){
-			//Move view container a distance of the height of keyboard
-			cstCenterContainerViewToCenterView.constant = -keyboardHeight
+			//DistanceRemain = c - a
+			let distanceRemain = viewContainerHeight - (endOfSubviewPosition + keyboardHeight)
+			//Move view container a distance of (distance remain - 20(bonus))
+			cstCenterContainerViewToCenterView.constant = distanceRemain - 20
 			UIView.animate(withDuration: 0.5) {
 				self.view.layoutIfNeeded()
 			}

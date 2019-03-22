@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CleanTheWorld" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="CleanTheWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,11 +40,17 @@
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-7I-u9y">
+                                        <rect key="frame" x="114" y="554.5" width="147" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g6r-AL-gGW">
-                                        <rect key="frame" x="37.5" y="392" width="300" height="175"/>
+                                        <rect key="frame" x="37.5" y="277" width="300" height="175"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-b2-47m" customClass="CustomTextField" customModule="CleanTheWorld" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="79.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="47.5"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -55,7 +61,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="∙∙∙∙∙∙∙∙∙∙∙" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kv3-gB-DSb" customClass="CustomTextField" customModule="CleanTheWorld" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="95.5" width="300" height="79.5"/>
+                                                <rect key="frame" x="0.0" y="63.5" width="300" height="48"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -65,34 +71,55 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-hO-Ai1" customClass="BorderButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="127.5" width="300" height="47.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                                <state key="normal" title="Log In">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="9uQ-fx-AdG" kind="show" id="mu0-Vn-KWY"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="eaw-JM-qbu"/>
                                             <constraint firstAttribute="height" constant="175" id="kdr-Ss-UUI"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-hO-Ai1" customClass="BorderButton" customModule="CleanTheWorld" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="583" width="300" height="47.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                        <state key="normal" title="Log In">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-gn-6O2">
+                                        <rect key="frame" x="86" y="467" width="203" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Forgot your password ?">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="9uQ-fx-AdG" kind="show" id="mu0-Vn-KWY"/>
-                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFj-k8-Ahd" customClass="BorderButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="597" width="300" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="g6r-AL-gGW" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="39Y-Tg-AkF"/>
+                                    <constraint firstItem="uGf-gn-6O2" firstAttribute="top" secondItem="g6r-AL-gGW" secondAttribute="bottom" constant="15" id="DpU-9a-vI8"/>
+                                    <constraint firstItem="PFj-k8-Ahd" firstAttribute="top" secondItem="Gdb-7I-u9y" secondAttribute="bottom" constant="15" id="JOZ-hR-Hhx"/>
+                                    <constraint firstItem="g6r-AL-gGW" firstAttribute="top" secondItem="VbO-za-WBX" secondAttribute="bottom" constant="65" id="LFV-wL-2c1"/>
                                     <constraint firstItem="VbO-za-WBX" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="NMX-AS-dgy"/>
                                     <constraint firstItem="VbO-za-WBX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aic-7n-ZI3" secondAttribute="leading" constant="15" id="O1x-yD-Fk3"/>
-                                    <constraint firstAttribute="bottom" secondItem="g6r-AL-gGW" secondAttribute="bottom" constant="100" id="Ygj-AM-dd8"/>
+                                    <constraint firstItem="PFj-k8-Ahd" firstAttribute="width" secondItem="lGo-hO-Ai1" secondAttribute="width" id="V1i-lL-qX1"/>
+                                    <constraint firstItem="PFj-k8-Ahd" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="W8r-aj-t1E"/>
                                     <constraint firstItem="VbO-za-WBX" firstAttribute="top" secondItem="1VI-ax-mO2" secondAttribute="bottom" constant="45" id="ZOv-LO-GXK"/>
+                                    <constraint firstItem="uGf-gn-6O2" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="ciJ-IA-g2s"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VbO-za-WBX" secondAttribute="trailing" constant="15" id="fDV-5K-7uj"/>
                                     <constraint firstItem="1VI-ax-mO2" firstAttribute="top" secondItem="Aic-7n-ZI3" secondAttribute="top" constant="50" id="kBY-g7-hb0"/>
+                                    <constraint firstAttribute="bottom" secondItem="PFj-k8-Ahd" secondAttribute="bottom" constant="25" id="nnl-cF-ZJm"/>
                                     <constraint firstItem="1VI-ax-mO2" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="uVV-IA-WXW"/>
+                                    <constraint firstItem="Gdb-7I-u9y" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="wT8-Ff-JpW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -114,11 +141,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cstCenterContainerViewToCenterView" destination="M1p-p8-wPA" id="Lup-tc-P4z"/>
-                        <outlet property="stackViewLogin" destination="g6r-AL-gGW" id="03F-m9-LvA"/>
-                        <outlet property="txtPassword" destination="kv3-gB-DSb" id="bob-yH-mX9"/>
-                        <outlet property="txtUserName" destination="QXS-b2-47m" id="nkb-lG-79P"/>
-                        <outlet property="viewContainer" destination="Aic-7n-ZI3" id="IXn-dB-V45"/>
+                        <outlet property="cstCenterContainerViewToCenterView" destination="M1p-p8-wPA" id="HGn-4v-SYV"/>
+                        <outlet property="stackViewLogin" destination="g6r-AL-gGW" id="5lh-3s-c2U"/>
+                        <outlet property="txtPassword" destination="kv3-gB-DSb" id="YMs-JL-PuW"/>
+                        <outlet property="txtUserName" destination="QXS-b2-47m" id="mFQ-5i-B3c"/>
+                        <outlet property="viewContainer" destination="Aic-7n-ZI3" id="zel-aP-Ujw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
