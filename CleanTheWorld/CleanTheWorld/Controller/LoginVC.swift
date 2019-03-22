@@ -110,8 +110,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 	
 	
 	
-	//Come back from second view controller
-	@IBAction func unwindFromSecondVC(unwindSegue: UIStoryboardSegue) {
+	//Come back from Sign Up view controller
+	@IBAction func unwindFromSignUpVC(unwindSegue: UIStoryboardSegue) {
 		
 	}
 	

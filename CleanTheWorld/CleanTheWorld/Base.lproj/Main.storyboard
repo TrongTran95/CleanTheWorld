@@ -44,7 +44,7 @@
                                         <rect key="frame" x="37.5" y="392" width="300" height="175"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-b2-47m" customClass="CustomTextField" customModule="CleanTheWorld" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="47.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="79.5"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
@@ -55,7 +55,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="∙∙∙∙∙∙∙∙∙∙∙" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kv3-gB-DSb" customClass="CustomTextField" customModule="CleanTheWorld" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="63.5" width="300" height="48"/>
+                                                <rect key="frame" x="0.0" y="95.5" width="300" height="79.5"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -65,23 +65,24 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-hO-Ai1" customClass="BorderButton" customModule="CleanTheWorld" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="127.5" width="300" height="47.5"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                                <state key="normal" title="Log In">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="9uQ-fx-AdG" kind="show" id="mu0-Vn-KWY"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="eaw-JM-qbu"/>
                                             <constraint firstAttribute="height" constant="175" id="kdr-Ss-UUI"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGo-hO-Ai1" customClass="BorderButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="583" width="300" height="47.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9uQ-fx-AdG" kind="show" id="mu0-Vn-KWY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="g6r-AL-gGW" firstAttribute="centerX" secondItem="Aic-7n-ZI3" secondAttribute="centerX" id="39Y-Tg-AkF"/>
@@ -151,7 +152,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JRr-dm-haR" kind="unwind" unwindAction="unwindFromSecondVCWithUnwindSegue:" id="Jyk-VX-BXq"/>
+                                    <segue destination="JRr-dm-haR" kind="unwind" unwindAction="unwindFromSignUpVCWithUnwindSegue:" id="a6d-Rl-dz5"/>
                                 </connections>
                             </button>
                         </subviews>
