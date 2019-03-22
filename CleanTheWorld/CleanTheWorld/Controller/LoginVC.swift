@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var txtUserName: CustomTextField!
 	@IBOutlet weak var txtPassword: CustomTextField!
 	@IBOutlet weak var cstCenterContainerViewToCenterView: NSLayoutConstraint!
@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		)
 		NotificationCenter.default.addObserver(
 			self,
-			selector: #selector(keyboardWillDisappear(notification:)),
+			selector: #selector(keyboardWillHide(notification:)),
 			name: UIResponder.keyboardWillHideNotification,
 			object: nil
 		)
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	
 	//When keyboard deactive
 	//move the view down
-	@objc func keyboardWillDisappear(notification: NSNotification?) {
+	@objc func keyboardWillHide(notification: NSNotification?) {
 		//if the view is already move up (it's not hide the content)
 		if (!isKeyboardHideTheContent) {
 			//Move down
@@ -78,7 +78,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			}
 		}
 	}
-	
+
 	//Calculate and move the view up
 	func moveViewUp(){
 		//endOfSubviewPosition = distance to subview + subview height
