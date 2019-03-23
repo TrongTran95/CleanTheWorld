@@ -78,9 +78,6 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <segue destination="9uQ-fx-AdG" kind="show" id="mu0-Vn-KWY"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -102,6 +99,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="9uQ-fx-AdG" kind="show" id="vca-vQ-GlY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="120.98950524737631"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="p7a-kT-mXQ">
             <objects>
-                <viewController id="9uQ-fx-AdG" sceneMemberID="viewController">
+                <viewController id="9uQ-fx-AdG" customClass="SignUpVC" customModule="CleanTheWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25s-Wg-mWC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
