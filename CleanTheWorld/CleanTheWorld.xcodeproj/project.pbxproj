@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8028C25E2247CA0500FAF12C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C25D2247CA0500FAF12C /* Event.swift */; };
+		8028C2602247CA5300FAF12C /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C25F2247CA5300FAF12C /* StatusType.swift */; };
+		8028C2632247CB6700FAF12C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C2622247CB6700FAF12C /* DataService.swift */; };
+		8028C2652247CE2800FAF12C /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C2642247CE2800FAF12C /* EventCell.swift */; };
+		8028C2692247D25F00FAF12C /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C2682247D25E00FAF12C /* EventVC.swift */; };
+		8028C26B2247D43100FAF12C /* StatusLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C26A2247D43100FAF12C /* StatusLable.swift */; };
+		8028C26D2247E38400FAF12C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8028C26C2247E38400FAF12C /* RoundButton.swift */; };
 		806039722244BD49002E6728 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806039712244BD49002E6728 /* BorderButton.swift */; };
 		806039752244C01E002E6728 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 806039742244C01E002E6728 /* Default-568h@2x.png */; };
 		806039772244CB63002E6728 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806039762244CB63002E6728 /* CustomTextField.swift */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8028C25D2247CA0500FAF12C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8028C25F2247CA5300FAF12C /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
+		8028C2622247CB6700FAF12C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		8028C2642247CE2800FAF12C /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		8028C2682247D25E00FAF12C /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		8028C26A2247D43100FAF12C /* StatusLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusLable.swift; sourceTree = "<group>"; };
+		8028C26C2247E38400FAF12C /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		806039712244BD49002E6728 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
 		806039742244C01E002E6728 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		806039762244CB63002E6728 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -45,9 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8028C2612247CB2F00FAF12C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8028C2622247CB6700FAF12C /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8060396E2244BD2B002E6728 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8028C25D2247CA0500FAF12C /* Event.swift */,
+				8028C25F2247CA5300FAF12C /* StatusType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -57,6 +81,9 @@
 			children = (
 				806039712244BD49002E6728 /* BorderButton.swift */,
 				806039762244CB63002E6728 /* CustomTextField.swift */,
+				8028C2642247CE2800FAF12C /* EventCell.swift */,
+				8028C26A2247D43100FAF12C /* StatusLable.swift */,
+				8028C26C2247E38400FAF12C /* RoundButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -64,6 +91,7 @@
 		806039702244BD3B002E6728 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8028C2682247D25E00FAF12C /* EventVC.swift */,
 				808DACCB224520FB0027EAF5 /* LoginVC.swift */,
 				808DACCA224520FB0027EAF5 /* SignUpVC.swift */,
 			);
@@ -102,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				806039732244BFFD002E6728 /* Support */,
+				8028C2612247CB2F00FAF12C /* Services */,
 				806039702244BD3B002E6728 /* Controller */,
 				8060396F2244BD34002E6728 /* View */,
 				8060396E2244BD2B002E6728 /* Model */,
@@ -183,11 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8028C2632247CB6700FAF12C /* DataService.swift in Sources */,
 				80F651B82244A70A00397DAA /* CleanTheWorld.xcdatamodeld in Sources */,
+				8028C2652247CE2800FAF12C /* EventCell.swift in Sources */,
+				8028C2602247CA5300FAF12C /* StatusType.swift in Sources */,
+				8028C26B2247D43100FAF12C /* StatusLable.swift in Sources */,
+				8028C2692247D25F00FAF12C /* EventVC.swift in Sources */,
+				8028C26D2247E38400FAF12C /* RoundButton.swift in Sources */,
 				80F651B02244A70A00397DAA /* AppDelegate.swift in Sources */,
 				808DACCD224520FB0027EAF5 /* LoginVC.swift in Sources */,
 				806039722244BD49002E6728 /* BorderButton.swift in Sources */,
 				808DACCC224520FB0027EAF5 /* SignUpVC.swift in Sources */,
+				8028C25E2247CA0500FAF12C /* Event.swift in Sources */,
 				806039772244CB63002E6728 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
