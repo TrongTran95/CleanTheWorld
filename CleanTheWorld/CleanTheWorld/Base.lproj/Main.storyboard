@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r37-35-Psi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r37-35-Psi">
                                 <rect key="frame" x="0.0" y="139" width="375" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -52,7 +52,7 @@
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 đường 45 phường Tân Gì Đó Tây Quận 11 Test Test Test Test Test Test Test Test Test Test" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGr-Ms-H9p">
-                                                            <rect key="frame" x="73" y="25" width="229" height="74"/>
+                                                            <rect key="frame" x="70" y="25" width="235" height="74"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="NGr-Ms-H9p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vy3-K4-z1m" secondAttribute="leading" constant="73" id="7bc-6f-wOq"/>
+                                                        <constraint firstItem="NGr-Ms-H9p" firstAttribute="leading" secondItem="Vy3-K4-z1m" secondAttribute="leading" constant="70" id="7bc-6f-wOq"/>
                                                         <constraint firstAttribute="trailing" secondItem="NXG-eS-6s2" secondAttribute="trailing" id="BK0-Pb-sWb"/>
                                                         <constraint firstItem="xhD-FB-oFT" firstAttribute="centerY" secondItem="FHC-fQ-1OF" secondAttribute="centerY" id="I8f-wg-RQn"/>
                                                         <constraint firstItem="UNK-4h-YyT" firstAttribute="leading" secondItem="Vy3-K4-z1m" secondAttribute="leading" id="IfI-zE-QeP"/>
@@ -84,7 +84,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="UNK-4h-YyT" secondAttribute="trailing" id="d3r-l4-WjR"/>
                                                         <constraint firstAttribute="bottom" secondItem="NXG-eS-6s2" secondAttribute="bottom" id="mdn-rU-eho"/>
                                                         <constraint firstItem="NGr-Ms-H9p" firstAttribute="top" secondItem="Vy3-K4-z1m" secondAttribute="top" constant="25" id="pmA-Uo-tZ4"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NGr-Ms-H9p" secondAttribute="trailing" constant="73" id="qt5-4X-lAV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NGr-Ms-H9p" secondAttribute="trailing" constant="70" id="qt5-4X-lAV"/>
                                                         <constraint firstAttribute="bottom" secondItem="UNK-4h-YyT" secondAttribute="bottom" id="tyu-YY-ERQ"/>
                                                         <constraint firstItem="xhD-FB-oFT" firstAttribute="leading" secondItem="FHC-fQ-1OF" secondAttribute="trailing" constant="5" id="v2R-lo-Bpp"/>
                                                         <constraint firstItem="NXG-eS-6s2" firstAttribute="top" secondItem="Vy3-K4-z1m" secondAttribute="top" id="vUC-OD-unF"/>
@@ -161,6 +161,9 @@
                                                     <segment title="Ha Noi"/>
                                                     <segment title="Other"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="filterSegmentChanged:" destination="nWb-w7-rMZ" eventType="valueChanged" id="ZXm-XF-aP5"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Process:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-2J-QXE">
                                                 <rect key="frame" x="15" y="138.5" width="285" height="20.5"/>
@@ -172,8 +175,11 @@
                                                 <rect key="frame" x="15" y="164" width="285" height="29"/>
                                                 <segments>
                                                     <segment title="Not started yet"/>
-                                                    <segment title="Done"/>
+                                                    <segment title="Completed"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="filterSegmentChanged:" destination="nWb-w7-rMZ" eventType="valueChanged" id="7Ek-8a-XrB"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Members:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3J-OO-KGb">
                                                 <rect key="frame" x="15" y="212" width="285" height="20.5"/>
@@ -187,6 +193,9 @@
                                                     <segment title="Need more members"/>
                                                     <segment title="Full"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="filterSegmentChanged:" destination="nWb-w7-rMZ" eventType="valueChanged" id="gK5-l4-i8p"/>
+                                                </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="8v9-cx-XcW">
                                                 <rect key="frame" x="15" y="295.5" width="285" height="40"/>
@@ -198,7 +207,7 @@
                                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="cancelFilterTapped:" destination="nWb-w7-rMZ" eventType="touchUpInside" id="DFG-S0-6SH"/>
+                                                            <action selector="buttonInFilterViewTapped:" destination="nWb-w7-rMZ" eventType="touchUpInside" id="h1j-dN-KDm"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E58-xQ-VqJ" customClass="RoundButton" customModule="CleanTheWorld" customModuleProvider="target">
@@ -207,6 +216,9 @@
                                                         <state key="normal" title="Filter">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="buttonInFilterViewTapped:" destination="nWb-w7-rMZ" eventType="touchUpInside" id="cSa-7O-yK0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -284,6 +296,8 @@
                     <connections>
                         <outlet property="filterView" destination="LhM-Kh-XYY" id="7Qz-Tx-0dm"/>
                         <outlet property="filterViewContainer" destination="Pmb-zh-EFa" id="9QT-Pl-aWa"/>
+                        <outlet property="lblFilterLocation" destination="ou2-6d-z1l" id="AjR-Hw-uYa"/>
+                        <outlet property="lblFilterProcessMember" destination="ngp-wf-zla" id="tmo-gN-TgN"/>
                         <outlet property="smLocation" destination="4BY-T8-kCB" id="QI9-VP-64g"/>
                         <outlet property="smMembers" destination="Esk-u8-8PR" id="ue8-IS-mkX"/>
                         <outlet property="smProcess" destination="gYI-yW-tn4" id="zpC-9V-A6x"/>
@@ -292,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwD-l0-U0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="817.24137931034488"/>
+            <point key="canvasLocation" x="966" y="816"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">

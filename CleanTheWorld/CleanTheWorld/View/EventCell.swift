@@ -27,8 +27,8 @@ class EventCell: UITableViewCell {
 		case .Done, .Full:
 			lblStatus.textColor = #colorLiteral(red: 0.267542459, green: 1, blue: 0.261089323, alpha: 1)
 		case .OnGoing, .NotFull:
-			lblStatus.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-			lblStatus.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+			lblStatus.textColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
+			lblStatus.layer.borderColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
 		}
 	}
 }
