@@ -127,6 +127,7 @@
                                             <outlet property="lblAddress" destination="NGr-Ms-H9p" id="mqn-T4-DoM"/>
                                             <outlet property="lblDate" destination="xhD-FB-oFT" id="7mj-YJ-ufR"/>
                                             <outlet property="lblStatus" destination="PhK-1N-PAA" id="sc4-b2-2eS"/>
+                                            <segue destination="ucd-GA-UsW" kind="show" id="g2u-FZ-zn7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -286,6 +287,7 @@
                         <viewLayoutGuide key="safeArea" id="YuY-4g-kqe"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event" id="3Qb-Qd-T6y">
+                        <barButtonItem key="backBarButtonItem" title=" " id="d4b-FE-Grz"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu here" image="icon-menu" id="RnP-ke-pkV"/>
                         <barButtonItem key="rightBarButtonItem" image="icon-filter" id="K3R-ji-b7J">
                             <connections>
@@ -307,6 +309,150 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwD-l0-U0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966" y="816"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="zCj-LD-vwY">
+            <objects>
+                <viewController id="ucd-GA-UsW" customClass="EventDetailVC" customModule="CleanTheWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NYD-a6-SX0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-24-kRw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="78K-BG-Ti2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trong Duc Tran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0v-Zh-b5W">
+                                                <rect key="frame" x="100" y="37.5" width="250" height="25"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rac5" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-1m-LKV" customClass="PostImage" customModule="CleanTheWorld" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="95" width="325" height="220"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="220" id="Sbc-Oi-hhl"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggx-ZB-rLn" customClass="Avatar" customModule="CleanTheWorld" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="20" width="60" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="TID-Ba-JYQ"/>
+                                                    <constraint firstAttribute="width" constant="60" id="rOf-Sk-Ghl"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="jM3-aM-pc2">
+                                                <rect key="frame" x="40" y="410" width="295" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOy-V3-0fW" customClass="RoundButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="56.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="cOy-V3-0fW" secondAttribute="height" multiplier="1:1" id="rMc-Dd-kAJ"/>
+                                                        </constraints>
+                                                        <state key="normal" image="icon-location"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-XN-aHi" customClass="RoundButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                                        <rect key="frame" x="79.5" y="0.0" width="56.5" height="56.5"/>
+                                                        <state key="normal" image="icon-member"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-mZ-ZIt" customClass="RoundButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                                        <rect key="frame" x="159" y="0.0" width="56.5" height="56.5"/>
+                                                        <state key="normal" image="icon-comment"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4r-3A-ryh" customClass="RoundButton" customModule="CleanTheWorld" customModuleProvider="target">
+                                                        <rect key="frame" x="238.5" y="0.0" width="56.5" height="56.5"/>
+                                                        <state key="normal" image="icon-share"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="271/9 DUONG LE VAN LUONG PHUONG TAN QUY QUAN 7 THANH PHO HO CHI MINH" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGb-vc-RCG">
+                                                <rect key="frame" x="25" y="330" width="325" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="9Mj-mU-ini"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7Z-O3-jbN" customClass="RoundView" customModule="CleanTheWorld" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="481.5" width="325" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="You and 5 more people has joined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1a-OA-M9W">
+                                                        <rect key="frame" x="15" y="5.5" width="265.5" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="➤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6l-kK-LDb">
+                                                        <rect key="frame" x="290.5" y="1.5" width="19.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.68139982876712324" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="j6l-kK-LDb" firstAttribute="leading" secondItem="z1a-OA-M9W" secondAttribute="trailing" constant="10" id="36N-gf-Q9X"/>
+                                                    <constraint firstItem="z1a-OA-M9W" firstAttribute="centerY" secondItem="g7Z-O3-jbN" secondAttribute="centerY" id="S4i-eT-NdP"/>
+                                                    <constraint firstItem="j6l-kK-LDb" firstAttribute="centerY" secondItem="g7Z-O3-jbN" secondAttribute="centerY" id="aAm-vB-gs3"/>
+                                                    <constraint firstItem="z1a-OA-M9W" firstAttribute="leading" secondItem="g7Z-O3-jbN" secondAttribute="leading" constant="15" id="gX5-oT-hed"/>
+                                                    <constraint firstAttribute="height" constant="30" id="oZC-Xn-Ohy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j6l-kK-LDb" secondAttribute="trailing" constant="15" id="oif-hI-klV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="g7Z-O3-jbN" firstAttribute="width" secondItem="XOl-1m-LKV" secondAttribute="width" id="Fla-wy-vwI"/>
+                                            <constraint firstItem="jM3-aM-pc2" firstAttribute="leading" secondItem="78K-BG-Ti2" secondAttribute="leading" constant="40" id="HsO-VT-juX"/>
+                                            <constraint firstItem="Ggx-ZB-rLn" firstAttribute="top" secondItem="78K-BG-Ti2" secondAttribute="top" constant="20" id="NBD-0v-hjZ"/>
+                                            <constraint firstItem="Y0v-Zh-b5W" firstAttribute="leading" secondItem="Ggx-ZB-rLn" secondAttribute="trailing" constant="15" id="Na0-HY-Mhm"/>
+                                            <constraint firstItem="jM3-aM-pc2" firstAttribute="top" secondItem="OGb-vc-RCG" secondAttribute="bottom" constant="10" id="OiP-0P-HkK"/>
+                                            <constraint firstItem="OGb-vc-RCG" firstAttribute="top" secondItem="XOl-1m-LKV" secondAttribute="bottom" constant="15" id="PSW-py-eUd"/>
+                                            <constraint firstItem="jM3-aM-pc2" firstAttribute="centerX" secondItem="78K-BG-Ti2" secondAttribute="centerX" id="UAM-kt-nu2"/>
+                                            <constraint firstItem="Ggx-ZB-rLn" firstAttribute="leading" secondItem="78K-BG-Ti2" secondAttribute="leading" constant="25" id="Vn5-qa-BWY"/>
+                                            <constraint firstItem="g7Z-O3-jbN" firstAttribute="top" secondItem="jM3-aM-pc2" secondAttribute="bottom" constant="15" id="WQD-aI-zBt"/>
+                                            <constraint firstAttribute="trailing" secondItem="XOl-1m-LKV" secondAttribute="trailing" constant="25" id="YmS-hG-cDT"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y0v-Zh-b5W" secondAttribute="trailing" constant="25" id="atw-ZF-gfT"/>
+                                            <constraint firstItem="g7Z-O3-jbN" firstAttribute="centerX" secondItem="78K-BG-Ti2" secondAttribute="centerX" id="ei1-VG-kMb"/>
+                                            <constraint firstItem="Y0v-Zh-b5W" firstAttribute="centerY" secondItem="Ggx-ZB-rLn" secondAttribute="centerY" id="ei3-WJ-LX2"/>
+                                            <constraint firstItem="OGb-vc-RCG" firstAttribute="centerX" secondItem="78K-BG-Ti2" secondAttribute="centerX" id="fbs-sI-9dI"/>
+                                            <constraint firstItem="OGb-vc-RCG" firstAttribute="width" secondItem="XOl-1m-LKV" secondAttribute="width" id="nJa-Je-sNh"/>
+                                            <constraint firstItem="XOl-1m-LKV" firstAttribute="leading" secondItem="78K-BG-Ti2" secondAttribute="leading" constant="25" id="rLd-PV-HYn"/>
+                                            <constraint firstAttribute="trailing" secondItem="jM3-aM-pc2" secondAttribute="trailing" constant="40" id="uuM-kJ-KTI"/>
+                                            <constraint firstItem="XOl-1m-LKV" firstAttribute="top" secondItem="Ggx-ZB-rLn" secondAttribute="bottom" constant="15" id="yjq-I1-Wpj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="78K-BG-Ti2" secondAttribute="trailing" id="7Np-eU-FIz"/>
+                                    <constraint firstAttribute="bottom" secondItem="78K-BG-Ti2" secondAttribute="bottom" id="PV8-wF-EM1"/>
+                                    <constraint firstItem="78K-BG-Ti2" firstAttribute="height" secondItem="31p-24-kRw" secondAttribute="height" priority="250" id="elQ-Z7-ngx"/>
+                                    <constraint firstItem="78K-BG-Ti2" firstAttribute="width" secondItem="31p-24-kRw" secondAttribute="width" id="g2o-0Z-8ot"/>
+                                    <constraint firstItem="78K-BG-Ti2" firstAttribute="leading" secondItem="31p-24-kRw" secondAttribute="leading" id="ghc-QA-y6Z"/>
+                                    <constraint firstItem="78K-BG-Ti2" firstAttribute="top" secondItem="31p-24-kRw" secondAttribute="top" id="u98-LX-bS8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="31p-24-kRw" firstAttribute="top" secondItem="gxW-My-sSC" secondAttribute="top" id="5C3-AV-HHQ"/>
+                            <constraint firstItem="31p-24-kRw" firstAttribute="bottom" secondItem="gxW-My-sSC" secondAttribute="bottom" id="Ko7-i5-tbw"/>
+                            <constraint firstItem="gxW-My-sSC" firstAttribute="trailing" secondItem="31p-24-kRw" secondAttribute="trailing" id="Zzk-SO-NiG"/>
+                            <constraint firstItem="31p-24-kRw" firstAttribute="leading" secondItem="gxW-My-sSC" secondAttribute="leading" id="zWY-sN-SvN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gxW-My-sSC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post" id="aVM-Vy-eTj">
+                        <barButtonItem key="rightBarButtonItem" title="Sett/Repo" id="ZUb-vl-lD4"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wa1-VF-Ct4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941.5999999999999" y="815.44227886056979"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
@@ -523,10 +669,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rac5" width="550" height="330"/>
         <image name="bg-Green-Flower" width="2048" height="2732"/>
         <image name="bg-Leaf-Green" width="2048" height="2732"/>
+        <image name="icon-comment" width="512" height="512"/>
         <image name="icon-date" width="24" height="24"/>
         <image name="icon-filter" width="18.399999618530273" height="18.399999618530273"/>
+        <image name="icon-location" width="512" height="512"/>
+        <image name="icon-member" width="512" height="512"/>
         <image name="icon-menu" width="18" height="18"/>
+        <image name="icon-share" width="512" height="512"/>
     </resources>
 </document>
