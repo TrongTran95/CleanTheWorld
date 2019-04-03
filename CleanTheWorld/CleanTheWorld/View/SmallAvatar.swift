@@ -22,7 +22,9 @@ class SmallAvatar: UIImageView {
 	}
 	
 	func updateViews(){
-		layer.cornerRadius = 20
+		let height = frame.size.height
+		print(frame.size.height)
+		layer.cornerRadius = height/2
 		layer.borderWidth = 1
 		layer.borderColor = #colorLiteral(red: 0.2686672807, green: 0.5709795356, blue: 0.1427664161, alpha: 1)
 		self.clipsToBounds = true
@@ -30,11 +32,12 @@ class SmallAvatar: UIImageView {
 	}
 	
 	func createView(){
-		let view = UIView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+		let height = frame.size.height
+		let view = UIView(frame: CGRect(x: 0, y: 0, width: height, height: height))
 		view.backgroundColor = UIColor.clear
 		view.layer.borderWidth = 3
 		view.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-		view.layer.cornerRadius = 20
+		view.layer.cornerRadius = height/2
 		addSubview(view)
 	}
 	

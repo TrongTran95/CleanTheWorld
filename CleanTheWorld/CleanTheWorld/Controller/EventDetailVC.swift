@@ -13,13 +13,24 @@ class EventDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
 	@IBOutlet weak var scroller: UIScrollView!
 	@IBOutlet weak var tvMembers: UITableView!
+	@IBOutlet weak var cstDescriptionViewHeight: NSLayoutConstraint!
 	
-    override func viewDidLoad() {
+	@IBOutlet weak var cstCommentsTableViewHeight: NSLayoutConstraint!
+	@IBOutlet weak var descriptionView: DescriptionView!
+	@IBOutlet weak var tvComments: UITableView!
+	override func viewDidLoad() {
         super.viewDidLoad()
 		tvMembers.delegate = self
 		tvMembers.dataSource = self
-        // Do any additional setup after loading the view.
+		tvComments.delegate = self
+		tvComments.dataSource = self
+		
     }
+	@IBAction func abc(_ sender: Any) {
+		cstDescriptionViewHeight.constant = 0
+		descriptionView.isHidden = true
+		view.layoutIfNeeded()
+	}
 	
 	override func viewDidLayoutSubviews() {
 		scroller.isScrollEnabled = true
@@ -29,7 +40,11 @@ class EventDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 5
+		if (tableView == tvMembers) {
+			return 5
+		} else {
+			return 10
+		}
 	}
 	
 	var arrName = ["John", "Susie", "Sushi", "Tempura", "Nani"]
@@ -40,11 +55,27 @@ class EventDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
 			cell.avatar.image = UIImage(named: arrImage[indexPath.row])
 			cell.name.text = arrName[indexPath.row]
 			return cell
+		} else if let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsCell") as? CommentsCell {
+			
+			return cell
 		}
-		return MembersCell()
+		return UITableViewCell()
+	}
+	var count:CGFloat = 0
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableView.automaticDimension
+	}
+	
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableView.automaticDimension
 	}
 	
 	override func viewWillLayoutSubviews() {
-		tvMembers.reloadData()
+		//Change comments table view height constant
+		for cell in tvComments.visibleCells {
+			count += cell.bounds.height
+		}
+		cstCommentsTableViewHeight.constant = count
+		view.layoutIfNeeded()
 	}
 }
